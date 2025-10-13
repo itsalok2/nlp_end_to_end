@@ -211,3 +211,4 @@ notebooks/testing.ipynb
 notebooks/hpt_work/word2vec_model.vec
 mlartifacts/
 mlruns/
+local_s3/
