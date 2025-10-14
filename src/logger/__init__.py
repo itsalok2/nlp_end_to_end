@@ -19,18 +19,18 @@ def configure_logger():
     Configures logging with a rotating file handler and a console handler.
     """
     # Create a custom logger
-    logger=logging.getlogger()
+    logger=logging.getLogger()
     logger.setLevel(logging.DEBUG)
 
     # define formatter
     formatter=logging.Formatter("[ %(asctime)s ] %(name)s - %(levelname)s - %(message)s")
 
     # file handler with rotation
-    file_handler=RotatingFileHandler(log_dir_path,maxBytes=max_log_size,backupCount=backup_count,encoding='utf-8')
+    file_handler=RotatingFileHandler(log_file_path,maxBytes=max_log_size,backupCount=backup_count,encoding='utf-8')
     file_handler.setFormatter(formatter)
     file_handler.setLevel(logging.INFO)
 
-    console_handler=ogging.StreamHandler(sys.stdout)
+    console_handler=logging.StreamHandler(sys.stdout)
     console_handler.setFormatter(formatter)
     console_handler.setLevel(logging.INFO)
 
