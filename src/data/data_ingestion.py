@@ -68,9 +68,9 @@ def save_data(train_data:pd.DataFrame, test_data: pd.DataFrame, data_path:str)->
 def main():
     try:
         test_size=0.2
-        # df=load_data('https://raw.githubusercontent.com/itsalok2/nlp_end_to_end/refs/heads/main/data/raw/IMDB.csv')
-        s3=s3_connections.s3_operations(bucket_name="nlp-end-to-end-data",aws_access_key=access_key,aws_secret_key=secret_key)
-        df=s3.fetch_file_from_s3(file_key='IMDB.csv')
+        df=load_data('https://raw.githubusercontent.com/itsalok2/nlp_end_to_end/refs/heads/main/data/raw/IMDB.csv')
+        # s3=s3_connections.s3_operations(bucket_name="nlp-end-to-end-data",aws_access_key=access_key,aws_secret_key=secret_key)
+        # df=s3.fetch_file_from_s3(file_key='IMDB.csv')
         final_df=preprocess_data(df)
         train_data,test_data=train_test_split(final_df,test_size=test_size,random_state=42)
         save_data(train_data=train_data,test_data=test_data,data_path='./data')
