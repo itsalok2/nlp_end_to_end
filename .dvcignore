@@ -1,3 +1,4 @@
 # Add patterns of files dvc should ignore, which could improve
 # the performance. Learn more at
 # https://dvc.org/doc/user-guide/dvcignore
+/home/alok_kumar/kubernetes/nlp_end_to_end/data/processed/for_local_purpose/

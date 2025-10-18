@@ -214,3 +214,4 @@ mlruns/
 local_s3/
 data/processed/for_local_purpose #  This directory is used for local testing and should not be included in version control.
 models/
+data/
