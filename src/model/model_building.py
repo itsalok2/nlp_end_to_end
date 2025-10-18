@@ -19,7 +19,7 @@ def load_data(file_path)->pd.DataFrame:
 
 def train_model(x_train: np.ndarray, y_train: np.ndarray):
     try:
-        clf=LogisticRegression(C=1.7826543458096085,solver='liblinear',penalty='l1',max_iter=722)
+        clf=LogisticRegression(C=1.7826543458096085,solver='liblinear',penalty='l2',max_iter=722)
         clf.fit(x_train,y_train)
         logging.info('Model training completed')
         return clf
